@@ -264,7 +264,7 @@ self.discover = function () {
 	.on('listening', function () {
         client.setBroadcast(true);
         var onkyo_buffer = eiscp_packet('!xECNQSTN');
-	var pioneer_buffer = eiscp_packet('!pECNQSTN');
+		var pioneer_buffer = eiscp_packet('!pECNQSTN');
         self.emit('debug', util.format("DEBUG (sent_discovery) Sent broadcast discovery packet to %s:%s", options.address, options.port));
         client.send(onkyo_buffer, 0, onkyo_buffer.length, options.port, options.address);
 	client.send(pioneer_buffer, 0, pioneer_buffer.length, options.port, options.address);
